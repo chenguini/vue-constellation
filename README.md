@@ -19,5 +19,5 @@ npm run build --report
 ```
 查看星座运势的移动端，可用cordova打包成apk。app-debug.apk文件可下载试用，为Android版本。
 ![图片1](https://github.com/chenguini/vue-constellation/blob/master/pic1.png)
-![图片2](https://github.com/chenguini/vue-constellation/blob/master/pic1.png)
+![图片2](https://github.com/chenguini/vue-constellation/blob/master/pic2.png)
 
