@@ -26,6 +26,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 功能还在完善中
 主界面截图
 ![主界面](https://github.com/chenguini/vue-constellation/blob/master/pic2.png)
-![主界面]((http://github.com/chenguini/vue-constellation/blob/master/pic3.png)
+![主界面](http://github.com/chenguini/vue-constellation/blob/master/pic3.png)
 可点击星座名字或者图标修改选定星座
-![选择星座]((http://github.com/chenguini/vue-constellation/blob/master/pic1.jpg)
+![选择星座](http://github.com/chenguini/vue-constellation/blob/master/pic1.jpg)
