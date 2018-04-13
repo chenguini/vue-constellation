@@ -1,4 +1,0 @@
-#Fri Apr 13 18:53:54 CST 2018
-base.0=D\:\\nodejs\\vue-constellation\\cordovaApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-renamed.0=classes.dex
-file.0=D\:\\nodejs\\vue-constellation\\cordovaApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
