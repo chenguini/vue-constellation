@@ -19,3 +19,13 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+用vue做的安卓移动端查看星座运势app
+通过cordova打包成app
+文件中有apk可下载试看
+功能还在完善中
+主界面截图
+(http://github.com/chenguini/vue-constellation/raw/master/pic2.png)
+(http://github.com/chenguini/vue-constellation/raw/master/pic3.png)
+可点击星座名字或者图标修改选定星座
+(http://github.com/chenguini/vue-constellation/raw/master/pic1.jpg)
