@@ -18,14 +18,14 @@
 <style scoped>
 	.header {
 		width: 100%;
-		height: 60px;
+		height: 40px;
 		background: #99CCCC;/*#CCFFCC*/
 		color: #fff;
 		position: fixed;
 		top: 0;
 	}
 	.header p {
-		line-height: 60px;
+		line-height: 40px;
 		font-size: 20px;
 	}
 

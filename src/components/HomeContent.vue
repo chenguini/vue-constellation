@@ -1,14 +1,19 @@
 <template>
 	<div class="main">
+		<div class="scrollNav">
+			<span v-for="(item,index) in selectDay" @click="changeDay(index)" v-bind:class="{active:isActive==index}">
+				{{item.name}}
+			</span>
+		</div>
 		<div class="content-head">
 			<div @click="changeMsg" class="content-pic">
-				<icon v-bind:name="picName" scale="5"></icon>
+				<icon v-bind:name="picName" scale="4"></icon>
 			</div>
 			<span @click="changeMsg">{{titleName}}</span>
     		<app-modal @on-close="changeMsg" @changeConstellation="changeConstellation" :show="msg"  :constellation="constellation"></app-modal>
 		</div>
 		<ul class="fortune">
-			<li v-for="(item,key,index) in data.fortuneList" v-if="index < 4">
+			<li v-for="(item,key,index) in data.fortuneList" v-if="(item/16)&&!(item%16)">
 				<span class="left">{{key}}</span> 
 				<span  v-for="n in 5">
 				<icon v-if="n <= item/16" name="starfill" scale="2"></icon>
@@ -16,8 +21,8 @@
 				</span>	
 			</li>
 			<li v-else>
-				<span class="left">{{key}}</span>  
-				<span class="right">{{item}}</span>
+				<div class="left">{{key}}</div>  
+				<div class="right">{{item}}</div>
 			</li>
 		</ul>
 		<div class="content-foot">
@@ -49,6 +54,28 @@ import storage from '../util/storage'
 				constellation:'',
 				titleName:"",
 				picName:"",
+				day:"0",
+				isActive:"0",
+				selectDay:[
+					{
+						name:"今日"
+					},
+					{
+						name:"明日"
+					},
+					{
+						name:"本周"
+					},
+					{
+						name:"本月"
+					},
+					{
+						name:"今年"
+					},
+					{
+						name:"爱情"
+					}
+				],
 				items: storage.fetch()
 			}
 		},
@@ -61,16 +88,25 @@ import storage from '../util/storage'
 				this.titleName = data.name;
 				this.picName = data.pic;
 				storage.save(data);
-				console.log(storage);
+				// console.log(storage);
 				this.changeMsg();
 				this.postData();
 			},
+			changeDay(data) {
+				this.day = data;
+				this.isActive = data;
+				// console.log(this.day);
+				this.postData();
+			},
 			postData(){
-				this.$http.post("http://chenguini.top/haha.php",qs.stringify({constellation:this.constellation
-					}))
+				this.$http.post("http://chenguini.top/haha.php",qs.stringify(
+					{constellation:this.constellation,day:this.day}
+					))
 				.then(res=>{
 					this.data=res.data;
+					console.log(this.data);
 				}).catch(error=>console.log(error));
+				
 			}
 		},
 		created() {
@@ -94,7 +130,7 @@ import storage from '../util/storage'
 		background: #f9f9f9;
 		text-align: left;
 		line-height: 24px;
-		padding-top: 60px;
+		padding-top: 40px;
 		padding-bottom: 80px;
 	}
 	.content-head {
@@ -102,12 +138,12 @@ import storage from '../util/storage'
 		padding-top: 10px;
 	}
 	.content-pic {
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		background: #9cb9b9;
 		border-radius: 30px;
 		text-align: center;
-		line-height: 90px;
+		line-height: 75px;
 		display:inline-block;
 		vertical-align:middle;
 	}
@@ -117,7 +153,7 @@ import storage from '../util/storage'
 		font-weight: bold;
 		margin-left: 15px;
 	}
-	ul {
+	.content-foot {
 		clear: both;
 	}
 	li {
@@ -126,14 +162,35 @@ import storage from '../util/storage'
 	.fortune li {
 		width: 47%;
 		float: left;
+		vertical-align: top;
+		line-height: 25px;
 	}
 	.left {
 		color: #000;
+		float: left;
+		padding-right: 3%;
 	}
 	.right {
+		overflow: hidden;
 		color: #333;
 	}
 	.content-foot {
 		font-size: 16px;
+	}
+	.scrollNav {
+		display: flex;
+	}
+	.scrollNav span {
+		display: block;
+		flex: 1;
+		text-decoration: none;
+		color: #999;
+		text-align: center;
+		background-color: #eee;
+		padding: 5px 0;
+	}
+	.scrollNav .active {
+		color: #9cb9b9;
+		border-bottom: 2px solid #9cb9b9;
 	}
 </style>

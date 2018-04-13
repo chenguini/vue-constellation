@@ -171,15 +171,15 @@ li {
     position: relative;
 }
 .dialog-pic {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background: #99CCCC;
         border-radius: 30px;
         text-align: center;
-        line-height: 80px;
+        line-height: 75px;
         display:inline-block;
         vertical-align:middle;
-        margin-top: 5px;
+        margin-top: 10px;
 }
 .dialog-tag {
     width: 18px;
@@ -187,8 +187,8 @@ li {
     background-color: #99CCFF;
     border-radius: 9px;
     position: absolute;
-    top:50px;
-    left:65px;
+    top:45px;
+    left:62px;
 }
 .date {
      font-size: 10px;

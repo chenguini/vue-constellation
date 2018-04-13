@@ -17,10 +17,5 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-查看星座运势的移动端，可用cordova打包成apk。app-debug.apk文件可下载试用，为Android版本。<br/>
-查看明日，本周，本年运势还在实现中。<br/>
-点击星座图标或者名字可以重新选择星座。<br/>
-![图片1](https://github.com/chenguini/vue-constellation/blob/master/pic1.png)
-<br/>
-![图片2](https://github.com/chenguini/vue-constellation/blob/master/pic2.png)
 
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

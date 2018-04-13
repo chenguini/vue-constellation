@@ -10,6 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // assetsPublicPath: './',
     proxyTable: {
         // proxy all requests starting with /api to jsonplaceholder
       // '/api': {
@@ -53,7 +54,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-
+   // assetsPublicPath: './',
     /**
      * Source Maps
      */

@@ -2,15 +2,15 @@
 	<div class="footer">
 		<ul>
 			<li>
-				<icon name="ball" scale="4"></icon>
+				<icon name="ball" scale="3"></icon>
 				<p>运势</p>
 			</li>
 			<li>
-				<icon name="ball" scale="4"></icon>
+				<icon name="ball" scale="3"></icon>
 				<p>起源</p>
 			</li>
 			<li>
-				<icon name="ball" scale="4"></icon>
+				<icon name="ball" scale="3"></icon>
 				<p>我的</p>
 			</li>
 		</ul>
@@ -34,10 +34,11 @@
 		bottom: 0;
 		width: 100%;
 		background: #CCFFCC;
-		height: 60px;
+		height: 45px;
 		text-align: center;
 		color: #708090;
 		border-top: 1px solid #ccc;
+		padding-bottom: 10px;
 	}
 	.footer ul {
 	}
