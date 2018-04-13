@@ -25,7 +25,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 文件中有apk可下载试看
 功能还在完善中
 主界面截图
-(http://github.com/chenguini/vue-constellation/raw/master/pic2.png)
-(http://github.com/chenguini/vue-constellation/raw/master/pic3.png)
+(http://github.com/chenguini/vue-constellation/blob/master/pic2.png)
+(http://github.com/chenguini/vue-constellation/blob/master/pic3.png)
 可点击星座名字或者图标修改选定星座
-(http://github.com/chenguini/vue-constellation/raw/master/pic1.jpg)
+(http://github.com/chenguini/vue-constellation/blob/master/pic1.jpg)
